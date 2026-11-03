@@ -1,5 +1,14 @@
 # Три студии. Один город.
 
+**Живой сайт:** https://azykovm46-glitch.github.io/syzran-portfolio/
+
+| Страница | Ссылка |
+|---|---|
+| Витрина | https://azykovm46-glitch.github.io/syzran-portfolio/ |
+| «Волжский двор», ресторан | https://azykovm46-glitch.github.io/syzran-portfolio/restaurant/ |
+| «Гараж 163», детейлинг | https://azykovm46-glitch.github.io/syzran-portfolio/detailing/ |
+| «Сосновый берег», глэмпинг | https://azykovm46-glitch.github.io/syzran-portfolio/glamping/ |
+
 Портфолио из трёх концепт-сайтов для вымышленных компаний из Сызрани. Каждый сайт сделан в собственном визуальном языке, как будто их делали три разные студии. В корне лежит витрина со ссылками на все проекты.
 
 Стек: HTML, CSS и чистый JavaScript без сборки. Анимации на GSAP + ScrollTrigger (и Flip в ресторане), плавный скролл на Lenis. Всё подключается с CDN, поэтому сайты открываются на GitHub Pages как есть.
@@ -55,7 +64,8 @@
 - `prefers-reduced-motion` отключает GSAP-анимации, плавный скролл и CSS-анимации.
 - Без JavaScript и CDN контент остаётся видимым: начальные состояния анимаций задаёт сам скрипт.
 - У каждого сайта есть title, description, Open Graph, свой favicon и `theme-color`.
-- Картинки грузятся лениво, у всех указаны размеры и `alt`. Фото с Unsplash, остальная графика нарисована в SVG.
+- Фото с Unsplash отдаются в WebP (`fm=webp&auto=format`, `q=70`) с `srcset` на 375/768/1440 px и `sizes` под реальную ширину в вёрстке. Картинки грузятся лениво, у всех указаны размеры и `alt`. Остальная графика нарисована в SVG.
+- На фото машин нет логотипов и значков марок.
 - Внизу каждого сайта стоит плашка «Концепт-проект. Компания вымышленная».
 
 ## Локальный запуск
@@ -69,17 +79,24 @@ python3 -m http.server 8000
 
 ## Деплой на GitHub Pages
 
-1. Создайте на GitHub пустой репозиторий, например `sizran-portfolio`.
+1. Создайте на GitHub пустой репозиторий, например `syzran-portfolio`.
 2. Отправьте код:
    ```bash
-   git remote add origin https://github.com/<логин>/sizran-portfolio.git
+   git remote add origin https://github.com/<логин>/<репозиторий>.git
    git push -u origin main
    ```
 3. В репозитории откройте **Settings → Pages**.
 4. В блоке **Build and deployment** выберите **Source: Deploy from a branch**, ветку `main` и папку `/ (root)`, затем нажмите **Save**.
-5. Через 1–2 минуты сайт появится по адресу `https://<логин>.github.io/sizran-portfolio/`. Проекты будут доступны по `/restaurant/`, `/detailing/` и `/glamping/`.
+5. Через 1–2 минуты сайт появится по адресу `https://<логин>.github.io/<репозиторий>/`. Проекты будут доступны по `/restaurant/`, `/detailing/` и `/glamping/`.
 
-Совет: после деплоя замените относительный `og:image` в корневом `index.html` на абсолютный адрес (`https://<логин>.github.io/sizran-portfolio/assets/restaurant.webp`), чтобы превью корректно показывалось в мессенджерах.
+Если форкаете репозиторий под другим логином, замените абсолютный адрес в `og:image` корневого `index.html`.
+
+## Контакты
+
+Делаю сайты и Telegram-ботов для бизнеса.
+
+- Почта: azykovm46@gmail.com
+- Telegram: [@BoevayPoltorashka](https://t.me/BoevayPoltorashka)
 
 ---
 
