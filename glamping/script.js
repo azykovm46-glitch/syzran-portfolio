@@ -40,7 +40,8 @@
   /* ---------- анимации ---------- */
   if (hasGsap && !reduce) {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.hero__content > *', { y: 40, opacity: 0, duration: 1.2, stagger: .12, ease: 'power3.out', delay: .1 });
+    gsap.from('.hero__content > *:not(.hero__lead)', { y: 40, opacity: 0, duration: 1.2, stagger: .12, ease: 'power3.out', delay: .1 });
+    gsap.from('.hero__lead', { y: 40, duration: 1.2, ease: 'power3.out', delay: .3 }); // без opacity: LCP-элемент виден сразу
     gsap.from('.scene .front', { y: 80, duration: 1.6, ease: 'power3.out' });
     [['.hill-far', 40], ['.hill-mid', 70], ['.front', 110], ['.sun-move', -40]].forEach(([s, y]) => {
       gsap.to(s, { y: y, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });

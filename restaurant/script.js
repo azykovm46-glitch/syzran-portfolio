@@ -39,7 +39,8 @@
     // Появление hero
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     tl.from('.hero__title .line > span', { yPercent: 110, duration: 1.6, stagger: .12 })
-      .from('.hero__eyebrow, .hero__lead, .hero__actions', { y: 24, opacity: 0, duration: 1.2, stagger: .1 }, '-=1.1')
+      .from('.hero__eyebrow, .hero__actions', { y: 24, opacity: 0, duration: 1.2, stagger: .1 }, '-=1.1')
+      .from('.hero__lead', { y: 24, duration: 1.2 }, '<')  // без opacity: абзац — LCP-элемент, он должен быть виден сразу
       .from('.nav', { y: -30, opacity: 0, duration: 1 }, '-=1.2')
       .from('.layer--kremlin', { yPercent: 8, duration: 2.2 }, 0)
       .from('.layer--river', { yPercent: 4, duration: 2.2 }, 0);
