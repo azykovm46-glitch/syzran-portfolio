@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Максим Языков: три концепт-сайта для Сызрани</title>
+<meta name="description" content="Портфолио веб-разработчика: ресторан, детейлинг-студия и глэмпинг. Три вымышленные компании из Сызрани, три разных визуальных языка.">
+<meta name="theme-color" content="#efede8">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Три студии. Один город. Портфолио Максима Языкова">
+<meta property="og:description" content="Ресторан, детейлинг и глэмпинг: три концепт-сайта для Сызрани.">
+<meta property="og:image" content="assets/restaurant.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --paper: #efede8; --ink: #141414; --dim: #5f5d58; --line: rgba(20, 20, 20, .14); --pad: clamp(16px, 4vw, 56px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 "Onest", system-ui, sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px var(--pad); font-size: 14px; }
+  .top b { font-weight: 700; }
+  .top span { color: var(--dim); }
+  .intro { padding: clamp(40px, 8vw, 120px) var(--pad) clamp(48px, 7vw, 100px); display: grid; grid-template-columns: 1fr; gap: 40px; }
+  .intro h1 { font: 900 clamp(52px, 11vw, 188px)/.88 "Onest", sans-serif; letter-spacing: -.055em; margin: 0; }
+  .intro h1 .o { display: inline-block; width: .74em; height: .74em; border-radius: 50%; vertical-align: -.02em; background: conic-gradient(#c8a46a 0 33.3%, #c6ff00 0 66.6%, #2f5240 0); animation: turn 12s linear infinite; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  .intro__row { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: end; border-top: 1px solid var(--line); padding-top: 28px; }
+  .intro p { margin: 0; max-width: 560px; font-size: clamp(17px, 1.5vw, 21px); }
+  .legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+  .legend a { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .3s; }
+  .legend a:hover { padding-left: 10px; }
+  .legend span { color: var(--dim); }
+
+  .proj { --bg: #121110; --fg: #efe6d6; --acc: #c8a46a; background: var(--bg); color: var(--fg); margin: 0 clamp(8px, 1.4vw, 20px) clamp(8px, 1.4vw, 20px); border-radius: clamp(20px, 2.6vw, 36px); padding: clamp(24px, 4vw, 64px); display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 4vw, 64px); align-items: center; overflow: hidden; position: relative; }
+  .proj--det { --bg: #0b0b0b; --fg: #ececec; --acc: #c6ff00; border-radius: 0; }
+  .proj--gl { --bg: #f6f1e7; --fg: #1f2d24; --acc: #b5652a; border-radius: clamp(28px, 4vw, 56px); box-shadow: inset 0 0 0 1px var(--line); }
+  .proj__num { font-size: 14px; letter-spacing: .1em; color: var(--acc); margin: 0 0 18px; }
+  .proj h2 { margin: 0 0 18px; font-size: clamp(38px, 5vw, 76px); line-height: .95; letter-spacing: -.04em; font-weight: 900; }
+  .proj--rest h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; letter-spacing: -.02em; }
+  .proj--rest h2 em { color: var(--acc); }
+  .proj--det h2 { font-family: "Unbounded", "Arial Black", sans-serif; text-transform: uppercase; letter-spacing: -.05em; }
+  .proj--det h2 b { color: var(--acc); }
+  .proj--gl h2 em { color: var(--acc); }
+  .proj__lead { margin: 0 0 24px; opacity: .82; max-width: 460px; }
+  .proj ul.feat { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 8px; font-size: 15px; }
+  .proj ul.feat li { display: flex; gap: 12px; }
+  .proj ul.feat li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 8px; background: var(--acc); border-radius: 50%; }
+  .proj--det ul.feat li::before { border-radius: 0; }
+  .swatches { display: flex; gap: 6px; margin-bottom: 28px; }
+  .swatches i { width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(127, 127, 127, .35); }
+  .proj--det .swatches i { border-radius: 0; }
+  .open { display: inline-flex; align-items: center; gap: 14px; min-height: 56px; padding: 0 28px; background: var(--acc); color: var(--bg); text-decoration: none; font-weight: 700; border-radius: 99px; transition: gap .3s, transform .3s; }
+  .proj--rest .open { border-radius: 0; text-transform: uppercase; letter-spacing: .14em; font-size: 13px; }
+  .proj--det .open { border-radius: 0; font-family: ui-monospace, monospace; text-transform: uppercase; }
+  .proj--gl .open { background: #2f5240; color: #fff; }
+  .open:hover { gap: 26px; }
+  .shots { position: relative; padding-right: 9%; padding-bottom: 6%; }
+  .browser { border-radius: 14px; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .7), 0 0 0 1px rgba(127, 127, 127, .25); transform: perspective(1600px) rotateY(-6deg) rotateX(2deg); transition: transform .8s cubic-bezier(.2, .7, .1, 1); background: #222; }
+  .browser__bar { height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 12px; background: rgba(127, 127, 127, .18); }
+  .browser__bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(127, 127, 127, .55); }
+  .proj:hover .browser { transform: perspective(1600px) rotateY(0) rotateX(0); }
+  .phone { position: absolute; right: 0; bottom: 0; width: 26%; border-radius: 22px; overflow: hidden; border: 6px solid #111; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6); transition: transform .8s cubic-bezier(.2, .7, .1, 1); }
+  .proj:hover .phone { transform: translateY(-14px) rotate(-2deg); }
+  .phone img { aspect-ratio: 390/844; object-fit: cover; object-position: top; width: 100%; }
+  .stripe { padding: clamp(60px, 9vw, 120px) var(--pad); display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; border-bottom: 1px solid var(--line); }
+  .stripe h3 { margin: 0 0 10px; font-size: 20px; }
+  .stripe p { margin: 0; color: var(--dim); font-size: 15px; }
+  .stripe .n { font-size: 52px; font-weight: 900; letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; }
+  footer { padding: 40px var(--pad); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--dim); }
+  .js .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(.2, .7, .1, 1), transform 1s cubic-bezier(.2, .7, .1, 1); }
+  .js .reveal.is-in { opacity: 1; transform: none; }
+  @media (max-width: 900px) {
+    .proj { grid-template-columns: 1fr; }
+    .proj .shots { order: -1; }
+    .intro__row, .stripe { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .top span { display: none; }
+    .browser { transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Unbounded:wght@900&family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="top">
+  <b>Максим Языков</b>
+  <span>Веб-разработка и дизайн интерфейсов</span>
+  <b>2026</b>
+</header>
+
+<main>
+  <section class="intro" aria-labelledby="t">
+    <h1 id="t">Три студии.<br>Один г<span class="o" aria-hidden="true"></span>род.</h1>
+    <div class="intro__row">
+      <p>Три концепт-сайта для вымышленных компаний из Сызрани. У каждого свой визуальный язык, своя типографика и свои интерактивные фишки, будто их делали три разные студии.</p>
+      <ul class="legend">
+        <li><a href="#p1"><b>01 Волжский двор</b><span>ресторан</span></a></li>
+        <li><a href="#p2"><b>02 Гараж 163</b><span>детейлинг</span></a></li>
+        <li><a href="#p3"><b>03 Сосновый берег</b><span>глэмпинг</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <article class="proj proj--rest reveal" id="p1" aria-labelledby="p1t">
+    <div>
+      <p class="proj__num">01 / РЕСТОРАН</p>
+      <h2 id="p1t">Волжский <em>двор</em></h2>
+      <p class="proj__lead">Тёмный luxury-editorial, как разворот глянцевого журнала. Волжская кухня, стерлядь и вид на Спасскую башню.</p>
+      <ul class="feat">
+        <li>SVG-сцена «вечерняя Волга» с параллаксом слоёв</li>
+        <li>Горизонтальная лента фирменных блюд</li>
+        <li>Меню с фильтром и FLIP-анимацией, бронь столика</li>
+      </ul>
+      <div class="swatches" aria-label="Палитра: графит, кость, золото"><i style="background:#121110"></i><i style="background:#efe6d6"></i><i style="background:#c8a46a"></i><i style="background:#6b3f3c"></i></div>
+      <a class="open" href="restaurant/">Открыть сайт <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="shots">
+      <div class="browser"><div class="browser__bar"><i></i><i></i><i></i></div><img src="assets/restaurant.webp" width="1200" height="750" alt="Главный экран сайта ресторана: силуэт Спасской башни на фоне заката над Волгой" loading="lazy"></div>
+      <div class="phone"><img src="assets/restaurant-m.webp" width="390" height="844" alt="Мобильная версия сайта ресторана" loading="lazy"></div>
+    </div>
+  </article>
+
+  <article class="proj proj--det reveal" id="p2" aria-labelledby="p2t">
+    <div>
+      <p class="proj__num">02 / ДЕТЕЙЛИНГ</p>
+      <h2 id="p2t">Гараж <b>163</b></h2>
+      <p class="proj__lead">Тёмный tech и неон-брутализм: кислотный акцент, моноширинный шрифт, жёсткая сетка и курсор-прицел.</p>
+      <ul class="feat">
+        <li>Калькулятор стоимости с живым «чеком»</li>
+        <li>Слайдер «до/после» с генерируемой SVG-грязью</li>
+        <li>Запись в четыре шага со свободными слотами</li>
+      </ul>
+      <div class="swatches" aria-label="Палитра: чёрный, кислотный лайм, сталь"><i style="background:#0b0b0b"></i><i style="background:#c6ff00"></i><i style="background:#8f8f8f"></i><i style="background:#ececec"></i></div>
+      <a class="open" href="detailing/">Открыть сайт <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="shots">
+      <div class="browser"><div class="browser__bar"><i></i><i></i><i></i></div><img src="assets/detailing.webp" width="1200" height="750" alt="Главный экран сайта детейлинга: огромная надпись «Гараж 163» и фото мойки в кислотном цвете" loading="lazy"></div>
+      <div class="phone"><img src="assets/detailing-m.webp" width="390" height="844" alt="Мобильная версия сайта детейлинга" loading="lazy"></div>
+    </div>
+  </article>
+
+  <article class="proj proj--gl reveal" id="p3" aria-labelledby="p3t">
+    <div>
+      <p class="proj__num">03 / ГЛЭМПИНГ</p>
+      <h2 id="p3t">Сосновый <em>берег</em></h2>
+      <p class="proj__lead">Светлый и воздушный: песок, хвоя, скругления и рукописные пометки. Отдых на Волге в 18 км от города.</p>
+      <ul class="feat">
+        <li>Утро, день и закат: перекраска всего сайта</li>
+        <li>Календарь занятости с расчётом цены поездки</li>
+        <li>Бенто-галерея с лайтбоксом и FAQ-аккордеон</li>
+      </ul>
+      <div class="swatches" aria-label="Палитра: песок, хвоя, терракота, небо"><i style="background:#f6f1e7"></i><i style="background:#2f5240"></i><i style="background:#b5652a"></i><i style="background:#9fd0e6"></i></div>
+      <a class="open" href="glamping/">Открыть сайт <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="shots">
+      <div class="browser"><div class="browser__bar"><i></i><i></i><i></i></div><img src="assets/glamping.webp" width="1200" height="750" alt="Главный экран сайта глэмпинга: иллюстрированный пейзаж с соснами, рекой и домиками" loading="lazy"></div>
+      <div class="phone"><img src="assets/glamping-m.webp" width="390" height="844" alt="Мобильная версия сайта глэмпинга" loading="lazy"></div>
+    </div>
+  </article>
+
+  <section class="stripe" aria-label="Подход">
+    <div class="reveal"><div class="n">0</div><h3>Сборщиков и фреймворков</h3><p>Чистые HTML, CSS и JS. Открывается с GitHub Pages как есть, без сборки.</p></div>
+    <div class="reveal"><div class="n">375+</div><h3>Пикселей и шире</h3><p>Каждый экран проверен на 375, 768 и 1440 px, без горизонтального скролла.</p></div>
+    <div class="reveal"><div class="n">AA</div><h3>Доступность и движение</h3><p>Семантика, alt, фокус с клавиатуры и уважение к prefers-reduced-motion.</p></div>
+  </section>
+</main>
+
+<footer>
+  <span>Концепт-проекты. Компании вымышленные. Разработка: Максим Языков</span>
+  <span>Фото: Unsplash</span>
+</footer>
+
+<script>
+  (() => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('is-in')); return; }
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } }), { threshold: .12 });
+    els.forEach((e) => io.observe(e));
+  })();
+</script>
+</body>
+</html>
