@@ -67,8 +67,8 @@
   ba.addEventListener('pointerup', () => { drag = false; });
   ba.addEventListener('pointercancel', () => { drag = false; });
   if (hasGsap && !reduce) {
-    const o = { p: 50 };
-    ScrollTrigger.create({ trigger: ba, start: 'top 70%', once: true, onEnter: () => gsap.timeline().to(o, { p: 18, duration: .9, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }).to(o, { p: 82, duration: 1.2, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }).to(o, { p: 50, duration: .8, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }) });
+    const o = { p: 70 };
+    ScrollTrigger.create({ trigger: ba, start: 'top 70%', once: true, onEnter: () => gsap.timeline().to(o, { p: 52, duration: .9, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }).to(o, { p: 92, duration: 1.2, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }).to(o, { p: 70, duration: .8, ease: 'power2.inOut', onUpdate: () => setPos(o.p) }) });
   }
 
   /* ---------- калькулятор ---------- */

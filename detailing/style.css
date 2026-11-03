@@ -125,11 +125,10 @@ button { font: inherit; color: inherit; }
 
 /* before / after */
 .ba { position: relative; aspect-ratio: 16/9; overflow: hidden; border: 1px solid var(--line); user-select: none; -webkit-user-select: none; touch-action: pan-y; cursor: ew-resize; background: #111; }
-.ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
 .ba__img--after { filter: contrast(1.12) saturate(1.1) brightness(1.05); }
 .ba__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
 .ba__before .ba__img { filter: grayscale(.5) sepia(.5) brightness(.78) contrast(.82) saturate(.8); }
-.ba__plate { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .ba__dirt { position: absolute; inset: 0; width: 100%; height: 100%; mix-blend-mode: multiply; opacity: .8; }
 .ba__handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; background: var(--acid); transform: translateX(-1px); pointer-events: none; box-shadow: 0 0 24px rgba(198, 255, 0, .6); }
 .ba__handle span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--acid); color: #000; font: 700 12px/1 var(--mono); padding: 14px 12px; white-space: nowrap; letter-spacing: .1em; }

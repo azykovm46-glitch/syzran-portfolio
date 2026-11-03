@@ -10,7 +10,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Три студии. Один город. Портфолио Максима Языкова">
 <meta property="og:description" content="Ресторан, детейлинг и глэмпинг: три концепт-сайта для Сызрани.">
-<meta property="og:image" content="assets/restaurant.webp">
+<meta property="og:image" content="https://azykovm46-glitch.github.io/syzran-portfolio/assets/og.jpg">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,13 +73,26 @@
   .stripe h3 { margin: 0 0 10px; font-size: 20px; }
   .stripe p { margin: 0; color: var(--dim); font-size: 15px; }
   .stripe .n { font-size: 52px; font-weight: 900; letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; }
+  .contact { margin: 0 clamp(8px, 1.4vw, 20px); padding: clamp(40px, 7vw, 100px) clamp(24px, 4vw, 64px); background: var(--ink); color: var(--paper); border-radius: clamp(20px, 2.6vw, 36px); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: end; }
+  .contact h2 { margin: 0 0 18px; font-size: clamp(48px, 8vw, 128px); line-height: .9; letter-spacing: -.05em; font-weight: 900; }
+  .contact p { margin: 0; font-size: clamp(18px, 1.6vw, 22px); color: #c9c6bf; max-width: 420px; }
+  .contact__links { list-style: none; margin: 0; padding: 0; }
+  .contact__links a { display: grid; grid-template-columns: 110px 1fr auto; gap: 16px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(239, 237, 232, .2); text-decoration: none; transition: padding .35s, color .35s; }
+  .contact__links li:last-child a { border-bottom: 1px solid rgba(239, 237, 232, .2); }
+  .contact__links span { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: #a19e97; }
+  .contact__links b { font-size: clamp(20px, 2.2vw, 30px); font-weight: 700; letter-spacing: -.02em; overflow-wrap: anywhere; }
+  .contact__links i { font-style: normal; font-size: 26px; transition: transform .35s; }
+  .contact__links a:hover { padding-left: 12px; color: #c6ff00; }
+  .contact__links a:hover i { transform: translate(4px, -4px); }
   footer { padding: 40px var(--pad); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--dim); }
   .js .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(.2, .7, .1, 1), transform 1s cubic-bezier(.2, .7, .1, 1); }
   .js .reveal.is-in { opacity: 1; transform: none; }
   @media (max-width: 900px) {
     .proj { grid-template-columns: 1fr; }
     .proj .shots { order: -1; }
-    .intro__row, .stripe { grid-template-columns: 1fr; }
+    .intro__row, .stripe, .contact { grid-template-columns: 1fr; }
+    .contact__links a { grid-template-columns: 1fr auto; }
+    .contact__links span { grid-column: 1 / -1; }
   }
   @media (max-width: 560px) {
     .top span { display: none; }
@@ -96,7 +109,7 @@
 <header class="top">
   <b>Максим Языков</b>
   <span>Веб-разработка и дизайн интерфейсов</span>
-  <b>2026</b>
+  <a href="#contact" style="font-weight:700;text-decoration:none">Связаться ↓</a>
 </header>
 
 <main>
@@ -122,7 +135,7 @@
         <li>Горизонтальная лента фирменных блюд</li>
         <li>Меню с фильтром и FLIP-анимацией, бронь столика</li>
       </ul>
-      <div class="swatches" aria-label="Палитра: графит, кость, золото"><i style="background:#121110"></i><i style="background:#efe6d6"></i><i style="background:#c8a46a"></i><i style="background:#6b3f3c"></i></div>
+      <div class="swatches" role="img" aria-label="Палитра: графит, кость, золото"><i style="background:#121110"></i><i style="background:#efe6d6"></i><i style="background:#c8a46a"></i><i style="background:#6b3f3c"></i></div>
       <a class="open" href="restaurant/">Открыть сайт <span aria-hidden="true">→</span></a>
     </div>
     <div class="shots">
@@ -141,7 +154,7 @@
         <li>Слайдер «до/после» с генерируемой SVG-грязью</li>
         <li>Запись в четыре шага со свободными слотами</li>
       </ul>
-      <div class="swatches" aria-label="Палитра: чёрный, кислотный лайм, сталь"><i style="background:#0b0b0b"></i><i style="background:#c6ff00"></i><i style="background:#8f8f8f"></i><i style="background:#ececec"></i></div>
+      <div class="swatches" role="img" aria-label="Палитра: чёрный, кислотный лайм, сталь"><i style="background:#0b0b0b"></i><i style="background:#c6ff00"></i><i style="background:#8f8f8f"></i><i style="background:#ececec"></i></div>
       <a class="open" href="detailing/">Открыть сайт <span aria-hidden="true">→</span></a>
     </div>
     <div class="shots">
@@ -160,7 +173,7 @@
         <li>Календарь занятости с расчётом цены поездки</li>
         <li>Бенто-галерея с лайтбоксом и FAQ-аккордеон</li>
       </ul>
-      <div class="swatches" aria-label="Палитра: песок, хвоя, терракота, небо"><i style="background:#f6f1e7"></i><i style="background:#2f5240"></i><i style="background:#b5652a"></i><i style="background:#9fd0e6"></i></div>
+      <div class="swatches" role="img" aria-label="Палитра: песок, хвоя, терракота, небо"><i style="background:#f6f1e7"></i><i style="background:#2f5240"></i><i style="background:#b5652a"></i><i style="background:#9fd0e6"></i></div>
       <a class="open" href="glamping/">Открыть сайт <span aria-hidden="true">→</span></a>
     </div>
     <div class="shots">
@@ -173,6 +186,16 @@
     <div class="reveal"><div class="n">0</div><h3>Сборщиков и фреймворков</h3><p>Чистые HTML, CSS и JS. Открывается с GitHub Pages как есть, без сборки.</p></div>
     <div class="reveal"><div class="n">375+</div><h3>Пикселей и шире</h3><p>Каждый экран проверен на 375, 768 и 1440 px, без горизонтального скролла.</p></div>
     <div class="reveal"><div class="n">AA</div><h3>Доступность и движение</h3><p>Семантика, alt, фокус с клавиатуры и уважение к prefers-reduced-motion.</p></div>
+  </section>
+  <section class="contact reveal" id="contact" aria-labelledby="ct">
+    <div>
+      <h2 id="ct">Связаться</h2>
+      <p>Делаю сайты и Telegram-ботов для бизнеса</p>
+    </div>
+    <ul class="contact__links">
+      <li><a href="mailto:azykovm46@gmail.com"><span>Почта</span><b>azykovm46@gmail.com</b><i aria-hidden="true">↗</i></a></li>
+      <li><a href="https://t.me/TELEGRAM_NICK" target="_blank" rel="noopener" data-todo="telegram"><span>Telegram</span><b>@TELEGRAM_NICK</b><i aria-hidden="true">↗</i></a></li>
+    </ul>
   </section>
 </main>
 
